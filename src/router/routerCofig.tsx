@@ -1,12 +1,18 @@
 /*
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
- * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-06 11:19:35
+ * @LastEditors  : Please set LastEditors
+ * @LastEditTime : 2020-01-06 16:16:32
  * @Description: 
  */
-import Home from "../components/Home";
-import Details from "../components/Details";
+
+import Subject from '../views/subject'
+import Classify from '../views/classify'
+import Cart from '../views/cart'
+import My from '../views/my'
+import Main from '../views/main'
+
+import Home from '../views/homes'
 
 const route ={
     medo: "histroy",
@@ -20,14 +26,36 @@ const route ={
             component: Home,
             children:[
                 {
-                    path:'/home/details',
-                    component: Details
-                }
+                    path: '/home/main',                  
+                    component: Main,
+            
+                },
+                {
+                    path:'/home/subject',
+                    component: Classify
+                },
+                {
+                    path: '/home/classify',
+                    component: Subject,
+            
+                },
+                {
+                    path: '/home/cart',
+                    component: Cart,
+            
+                },
+               
+                {
+                    path: '/home/my',
+                    component: My,
+            
+                },
             ]
         },
+       
         {
-            path: '/details',
-            component: Details
+            path: '/',
+            redirect: '/home'
         }
     ]
 }
