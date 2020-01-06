@@ -5,7 +5,9 @@ import Config from "./router/routerCofig"
 const App: React.FC = () => {
   return (
     <>
+ 
       <View route={Config}></View>
+    
     </>
   );
 }
