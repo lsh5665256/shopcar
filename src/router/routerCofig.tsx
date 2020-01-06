@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-06 11:19:35
+ * @LastEditTime : 2020-01-06 18:35:13
  * @Description: 
  */
 import Home from "../components/Home";
@@ -12,7 +12,7 @@ const route ={
     medo: "histroy",
     routes:[
         {
-            path: '/',
+            path: '*',
             redirect: '/home'
         },
         {
