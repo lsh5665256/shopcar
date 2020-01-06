@@ -1,0 +1,95 @@
+.loginBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 100%;
+  padding: 5rem 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 9.6rem;
+}
+
+.loginMain {
+  padding: 1.8rem 0.4rem 0;
+}
+
+.loginMain .inputWrap {
+  height: 5.4rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.loginMain .inputWrap input {
+  display: block;
+  height: 80%;
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.loginMain .onePx_bottom {
+  position: relative;
+}
+
+.loginMain .onePx_bottom:after {
+  content: "";
+  width: 200%;
+  background: #ededed;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+}
+
+.loginMain .loginBtn {
+  margin-top: 1rem;
+  display: block;
+  outline: 0 none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  font-size: 18px;
+  height: 47px;
+  line-height: 47px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #108ee9;
+}
+
+.loginMain .loginBtn span {
+  width: 200%;
+  height: 200%;
+  border: 1px solid #108ee9;
+  border-radius: 10px;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  box-sizing: border-box;
+  pointer-events: none;
+  color: #fff;
+}
