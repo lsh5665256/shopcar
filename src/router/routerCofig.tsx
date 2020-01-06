@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : Please set LastEditors
- * @LastEditTime : 2020-01-06 16:16:32
+ * @LastEditTime : 2020-01-06 16:52:43
  * @Description: 
  */
 
@@ -55,7 +55,7 @@ const route ={
        
         {
             path: '/',
-            redirect: '/home'
+            redirect: '/home/main'
         }
     ]
 }
