@@ -1,56 +1,25 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
 html,body,#root,.homes{
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
+
 }
 .homes{
   display: flex;
   flex-direction: column;
-  flex:1;
-}
-.head{
+} 
+.homes>.main{
+  overflow: hidden;
   width: 100%;
-  height: 40px;
-  background: skyblue;
-  text-align: center;
-  line-height: 40px;
-}
-.main{
   flex: 1;
 }
-.footer{
+.homes>.footer{
   width: 100%;
   height: 50px;
   background: #eee;
@@ -61,11 +30,88 @@ height: 100%;
 a{
   text-decoration: none;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.searchWrap{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchWrap input{
+  width: 90%;
+  height: 70%;
+  background: #ededed;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  border: none;
+  outline: none;
+  text-align: center;
+  
+}
+.classify{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.classify .content{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.classify .content .left{
+  width: 30%;
+  height: 100%;
+  overflow: scroll;
+}
+.classify .content .left p{
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.classify .content .right{
+  width: 70%;
+  overflow: scroll;
+}
+
+.classify .content .right .topBox{
+  width: 100%;
+  height: 120px;
+}
+.classify .content .right .topBox p{
+  width: 100%;
+  height: 100%;
+  background-size: cover ;
+  background-position: center ;
+}
+.classify .content .right .title{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+.classify .content .right .image-text{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.classify .content .right .image-text .item{
+  width: 50%;
+  height: 160px;
+}
+.classify .content .right .image-text .item p{
+  width: 100%;
+  text-align: center;
+}
+.classify .content .right .image-text .item img{
+  width: 100%;
+}
+.active1{
+  border-left: 2px solid #108ee9;
 }

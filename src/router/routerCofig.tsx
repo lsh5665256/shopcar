@@ -18,10 +18,6 @@ const route ={
     medo: "histroy",
     routes:[
         {
-            path: '/',
-            redirect: '/home'
-        },
-        {
             path: '/home',
             component: Home,
             children:[
@@ -32,11 +28,11 @@ const route ={
                 },
                 {
                     path:'/home/subject',
-                    component: Classify
+                    component:Subject
                 },
                 {
                     path: '/home/classify',
-                    component: Subject,
+                    component: Classify,
             
                 },
                 {
@@ -55,7 +51,7 @@ const route ={
        
         {
             path: '/',
-            redirect: '/home'
+            redirect: '/home/main'
         }
     ]
 }
