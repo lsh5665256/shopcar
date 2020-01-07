@@ -13,6 +13,7 @@ import My from '../views/my'
 import Main from '../views/main'
 import Login from "../views/login"
 import Home from '../views/homes'
+import SpeXiang from "../views/specialDetail"
 
 const route ={
     medo: "histroy",
@@ -54,6 +55,10 @@ const route ={
                     component: My,
             
                 },
+                {
+                    path:"/home/spexiang",
+                    component:SpeXiang
+                }
             ]
         },
        
