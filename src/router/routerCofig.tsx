@@ -7,7 +7,7 @@
  */
 
 import Subject from '../views/subject'
-import Classify from '../views/classify'
+import Classify from '../views/special'
 import Cart from '../views/cart'
 import My from '../views/my'
 import Main from '../views/main'

@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 import View from './router/routerView';
-import Config from "./router/routerCofig"
+import Cofig from "./router/routerCofig"
+
+
 const App: React.FC = () => {
   return (
     <>
-      <View route={Config}></View>
+      <View route={Cofig}></View>
     </>
   );
 }

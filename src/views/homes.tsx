@@ -5,7 +5,7 @@ const Homes:React.FC=(props:any)=>{
     return (
         <div className="homes">
           
-            <div className="main">
+            <div className="main">      
             <View route={props.child}></View>
             </div>
             <div className="footer">
