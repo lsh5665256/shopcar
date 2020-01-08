@@ -18,6 +18,7 @@ const Cart: React.FC<PropType> = (props) => {
         const {state}=props.location as {state?:any}
         console.log(state)
         Special.getSpecialDetail({ id:state })
+        Special.getPinglun({valueId:state,typeId:1,page:1,size:5})
     }, []);
     let goback=()=>{
         props.history.goBack();
@@ -62,7 +63,20 @@ const Cart: React.FC<PropType> = (props) => {
             </div>
             {/* 留言列表 */}
             <div className ="lylist">
-                  
+                 {
+                     Special.pllist.map((item,index)=>{
+                         return <div className="bao"> 
+                                <div className="shang">
+                                    <span>匿名用户</span>
+                                    <span>{item.add_time}</span>
+                                </div>
+                                <div className="xia">
+                                   <span>{item.content}</span>
+                                </div>
+                         </div>
+
+                     })
+                 } 
 
 
 

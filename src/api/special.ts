@@ -7,5 +7,5 @@ export let getSpecialDetail = (params: any)=>{
    // return  request.get('/topic/detail?id=314')
 }
 export let getPinglun = (params: any)=>{
-    return  request.get('/comment/list',{params})
+    return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,page:params.page,size:params.size})
 }

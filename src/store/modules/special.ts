@@ -25,17 +25,17 @@ export default class CreateStore{
     @action
     async getSpecialDetail(obj:object){
         const res:any =await getSpecialDetail(obj);
-        console.log(res,'res');
+       // console.log(res,'res');
         
         this.detaillist = [res]
-        console.log( this.detaillist,"resxin")
+      //  console.log( this.detaillist,"resxin")
     }
     @action
     async getPinglun(obj:object){
         const res:any =await getPinglun(obj);
-        console.log(res,'res');
+        console.log(res,'res1111');
         
         this.pllist= res.data
-        console.log( this.detaillist,"resxin")
+        console.log( this.pllist)
     }
 }

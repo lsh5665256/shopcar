@@ -7,5 +7,11 @@ export interface specialType{
     price_info:number,
     id:number,
     item_pic_url:any,
-    content: string
+    content: string,
+    valueId:string,
+    typeId:string,
+    add_time:string,
+    user_info:string
+  
+
 }
