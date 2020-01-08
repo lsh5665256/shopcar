@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 15:23:17
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-08 15:19:53
+ * @LastEditTime : 2020-01-08 20:12:00
  * @Description: 
  */
 
@@ -16,6 +16,7 @@
    goods_id:number,
    id:number,
    session_id:number,
+   goods_sn:string,
    cartList:Array<Item>,
  }
  interface Item {

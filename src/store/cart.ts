@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 15:03:13
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-08 15:21:57
+ * @LastEditTime : 2020-01-08 16:35:50
  * @Description: 
  */
 import React from "react";
@@ -133,12 +133,12 @@ export default class CarStore {
       let productIds=""
       this.index.map((item,index)=>{
         console.log(this.cartList[item].session_id)
-        // product.push(this.cartList[item].session_id)
+        product.push(this.cartList[item].session_id)
       })
-      // productIds=product.join(",")
-      // let res=await deletes(productIds)
-      // this.cartList= res.data.data.cartList;
-      // this.cartTotal=res.data.data.cartTotal;
-      // console.log(res,"ressssss")
+      productIds=product.join(",")
+      let res=await deletes(productIds)
+      this.cartList= res.data.data.cartList;
+      this.cartTotal=res.data.data.cartTotal;
+      console.log(res,"ressssss")
     }
     }

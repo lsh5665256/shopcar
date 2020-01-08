@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-07 10:13:09
+ * @LastEditTime : 2020-01-08 19:42:03
  * @Description: 
  */
 
@@ -11,7 +11,7 @@ import Classify from '../views/classify'
 import Cart from '../views/cart'
 import My from '../views/my'
 import Main from '../views/main'
-
+import Details from "../views/details"
 import Home from '../views/homes'
 
 const route ={
@@ -51,6 +51,10 @@ const route ={
             
                 },
             ]
+        },
+        {
+            path:"/details",
+            component: Details
         }
     ]
 }

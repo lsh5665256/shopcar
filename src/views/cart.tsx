@@ -7,17 +7,13 @@ import style from "./cart.module.scss"
 
 
 
-const Cart: React.FC =()=>{
+const Cart: React.FC =(props:any)=>{
     let store=useStore();
     let {cart}=store;
     useEffect(()=>{
         //初次数据复制
         cart.setaAddress();
     },[])
-
-    let isShow = () => {
-
-    }
 
     return useObserver(()=><>
             
@@ -45,7 +41,10 @@ const Cart: React.FC =()=>{
                                         :  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAMAAACf4xmcAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABCUExURUdwTMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzAV+Z0EAAAAVdFJOUwAJ+KUEFTPay2bzRXdZ7RkhmJ6qJOWhY+QAAAEDSURBVDjLnZTplsIgDIUNWwK2tdt9/1cdxHGmVcAc+dH25Hw0+71cvjhztDIZM4mNc4txo+BwZKxSVwbSFoMn8iFuCeDrG0RLNkc6GGK+ttCZ8gIzuJcgBgPxJ4rB4T2OkM0HjgRyq8V7Y8i/3/V06YVb/nKECa0qBYPffB1jaFd8AD8+RrBrY8R41FkQew2MkPtrR6IeRglzoW1/HrbizfZ9Pv8jCH0slOAm+D7mMeUn4PoYwegxpVNlCsqCKMurbJay9R8GyT0HSTmWeciTYsh7K+MPK1MW0H9eQOU652sqcch+15rUrFQXLpuFy7ksXLYuXDUZbBZ9v4sqiqju34jyD97JD4dkfgo1AAAAAElFTkSuQmCC"} alt=""/>
                                         }
                                     </div>
-                                    <div className={style.Item}>
+                                    <div className={style.Item} onClick={()=>{
+                                        console.log(props.history)
+                                        props.history.push('/details',{id:item.goods_sn})
+                                    }}>
                                         <img src={item.list_pic_url} alt=""/>
                                     </div>
                                     {cart.num== 1 ?
