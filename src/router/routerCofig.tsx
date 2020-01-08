@@ -13,10 +13,15 @@ import My from '../views/my'
 import Main from '../views/main'
 
 import Home from '../views/homes'
+import PageContent from '../views/PageContent/index'
 
 const route ={
     medo: "histroy",
     routes:[
+        {
+            path:'/detail',
+            component:PageContent
+        },
         {
             path: '/home',
             component: Home,

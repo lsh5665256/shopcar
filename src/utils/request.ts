@@ -19,7 +19,7 @@ instance.interceptors.request.use(function (config) {
 // Add a response interceptor
 instance.interceptors.response.use(function (response) {
   // Do something with response data
-  return response;
+  return response.data;
 }, function (error) {
   // Do something with response error
   

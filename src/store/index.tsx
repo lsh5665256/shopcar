@@ -1,7 +1,9 @@
 import React from 'react'
 // 导入store
-import Cart from './module/cart'
+import classify from './module/classify'
+import PageContent from './module/PageContent'
 
 export default {
-    cart: new Cart()
+    classify: new classify(),
+    PageContent:new PageContent()
 }

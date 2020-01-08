@@ -15,3 +15,13 @@ export function Current(id: number){
         params:{id}
     })
 }
+
+export const goDetail = (params:object) =>request.get('/api/goods/list',{params})
+export const getTopList = (params:object) =>request.get('/api/goods/category',{params})
+// export function goDetail(params:any){
+//     return request({
+//         url:'/api/goods/list?page=1&size=1000&categoryId=1008002',
+//         method:'get',
+//         params
+//     })
+// }
