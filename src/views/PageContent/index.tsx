@@ -38,7 +38,7 @@ const Detail :React.FC =()=>{
                 <div className={styles.content}>
                     {
                         store.PageContent.goodsList.map((item:any,index:number)=>{
-                            return <div className={styles.item} key={index}>
+                            return <div className={styles.item} key={index} onClick={()=>{}}>
                                 <img src={item.list_pic_url} alt=""/>
                                 <p>{item.name}</p>
                                 <p>{item.retail_price}</p>
