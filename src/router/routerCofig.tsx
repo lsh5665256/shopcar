@@ -27,6 +27,10 @@ const route ={
             component: Login,
         },
         {
+            path:"/spexiang",
+            component:SpeXiang
+        },
+        {
             path: '/home',
             component: Home,
             children:[
@@ -54,11 +58,8 @@ const route ={
                     path: '/home/my',
                     component: My,
             
-                },
-                {
-                    path:"/home/spexiang",
-                    component:SpeXiang
                 }
+               
             ]
         },
        

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {BrowserRouter, HashRouter, Redirect, Route, Switch} from "react-router-dom"
 interface propsType {
-    route:Routes
+    route:any
 }
 interface Routes {
     medo?: string,
@@ -9,8 +9,8 @@ interface Routes {
 }
 interface Item {
     path: string,
-    redirect?: any ,
-    component?: React.FC |React.Component,
+    redirect?: string ,
+    component?: React.FC | React.ComponentClass,
     children?: Array<Item>
 }
  class View extends Component<propsType> {
@@ -32,7 +32,7 @@ interface Item {
             </Switch>,
             <Switch key="2">
                 {
-                    redirects.map((item,index)=>{
+                    redirects.map((item:any,index)=>{
                         return <Redirect exact key={index} to={item.redirect} from={item.path}></Redirect>
                     })
                 }

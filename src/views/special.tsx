@@ -16,8 +16,10 @@ let Special: React.FC<PropType> = (props) => {
     }, [Special]);
     let goDetail=(id:number)=>{
         console.log(id);
-        props.history.push("/home/spexiang",id)
-       
+        props.history.push("/spexiang",id)
+       // props.history.push({pathname:"/spexiang/" +id})
+        
+        // props.history.push(`/spexiang/id=${id}`)
     }
     return useObserver(() => (
         <div className="specai-wrap">
