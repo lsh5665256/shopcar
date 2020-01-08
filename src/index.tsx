@@ -4,7 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import StoreContext from "./context/StoreContext";
+import store from "./store/index";
+
+//引入antd
+import 'antd/dist/antd.css';
+
+ReactDOM.render(<StoreContext.Provider value={store}>
+                    <App />
+                </StoreContext.Provider> , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

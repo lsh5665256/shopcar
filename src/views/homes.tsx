@@ -4,9 +4,6 @@ import View from "../router/routerView"
 const Homes:React.FC=(props:any)=>{
     return (
         <div className="homes">
-            <div className="head">
-                head
-            </div>
             <div className="main">
             <View route={props.child}></View>
             </div>

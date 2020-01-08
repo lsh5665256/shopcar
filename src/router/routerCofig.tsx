@@ -1,13 +1,8 @@
 /*
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
-<<<<<<< HEAD
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-06 18:35:13
-=======
- * @LastEditors  : Please set LastEditors
- * @LastEditTime : 2020-01-06 16:16:32
->>>>>>> 78d0f99a5bcd30c76b0505bcd00b73e492aaf024
+ * @LastEditTime : 2020-01-07 10:13:09
  * @Description: 
  */
 
@@ -24,11 +19,11 @@ const route ={
     routes:[
         {
             path: '*',
-            redirect: '/home'
+            redirect: '/home/main'
         },
         {
             path: '/home',
-            component: Home,
+            component:Home,
             children:[
                 {
                     path: '/home/main',                  
@@ -56,11 +51,6 @@ const route ={
             
                 },
             ]
-        },
-       
-        {
-            path: '/',
-            redirect: '/home'
         }
     ]
 }
