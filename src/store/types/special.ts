@@ -11,7 +11,8 @@ export interface specialType{
     valueId:string,
     typeId:string,
     add_time:string,
-    user_info:string
-  
+    user_info:any,
+    name: string,
+    username:any
 
 }

@@ -9,3 +9,7 @@ export let getSpecialDetail = (params: any)=>{
 export let getPinglun = (params: any)=>{
     return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,page:params.page,size:params.size})
 }
+export let getmorePing = (params: any)=>{
+    console.log(params,'___________')
+    return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId})
+}

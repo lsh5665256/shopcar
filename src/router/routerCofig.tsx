@@ -14,6 +14,8 @@ import Main from '../views/main'
 import Login from "../views/login"
 import Home from '../views/homes'
 import SpeXiang from "../views/specialDetail"
+import Moreping from "../views/moreping"
+import Liuyan from "../views/liuyan"
 
 const route ={
     medo: "histroy",
@@ -29,6 +31,14 @@ const route ={
         {
             path:"/spexiang",
             component:SpeXiang
+        },
+        {
+            path:"/moreping",
+            component:Moreping
+        },
+        {
+            path:"/liuyan",
+            component:Liuyan
         },
         {
             path: '/home',
