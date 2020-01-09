@@ -34,6 +34,7 @@ export default class PageContent{
     @action
     async getTopList(id:number,index?:number){
         this.curIndex = index
+        // 请求返回数据
         let res = await getTopList({id})
         this.navList = res.data.brotherCategory
         this.name = res.data.currentCategory.name
