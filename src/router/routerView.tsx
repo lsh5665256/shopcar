@@ -10,7 +10,7 @@ interface Routes {
 interface Item {
     path: string,
     redirect?: any ,
-    component?: React.FC |React.Component,
+    component?: React.FC |React.Component | any,
     children?: Array<Item>
 }
  class View extends Component<propsType> {

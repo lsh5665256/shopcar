@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-08 19:42:03
+ * @LastEditTime : 2020-01-09 08:12:42
  * @Description: 
  */
 
@@ -13,6 +13,7 @@ import My from '../views/my'
 import Main from '../views/main'
 import Details from "../views/details"
 import Home from '../views/homes'
+import PageContent from '../views/PageContent/index'
 
 const route ={
     medo: "histroy",
@@ -32,11 +33,11 @@ const route ={
                 },
                 {
                     path:'/home/subject',
-                    component: Classify
+                    component:Subject
                 },
                 {
                     path: '/home/classify',
-                    component: Subject,
+                    component: Classify,
             
                 },
                 {
@@ -55,6 +56,10 @@ const route ={
         {
             path:"/details",
             component: Details
+        },
+        {
+            path:'/detail',
+            component:PageContent
         }
     ]
 }
