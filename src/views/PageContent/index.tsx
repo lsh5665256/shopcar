@@ -10,12 +10,14 @@ const Detail :React.FC =()=>{
     useEffect(() => {
         store.PageContent.goDetail(history.location.state)
     }, [])
-    let checkID=(id:number)=>{
+    useEffect(() => {
+        store.PageContent.getTopList(history.location.state)
+    }, [])
+    let checkID=(id:number,index:number)=>{
         store.PageContent.goDetail(id)
-        store.PageContent.getTopList(id)
+        store.PageContent.getTopList(id,index)
     }
     let history = useHistory()
-    console.log(store.PageContent)
     return useObserver(()=>(
         <div className={styles.PageContent}>
             <div className={styles.header}>
@@ -26,7 +28,8 @@ const Detail :React.FC =()=>{
             <div className={styles.navlist}>
                 {
                     store.PageContent.navList.map((item,index)=>{
-                        return <span key={index} onClick={()=>checkID(item.id)}>{item.name}</span>
+                        return <span key={index} className={store.PageContent.curIndex == index ?styles.active:''} 
+                        onClick={()=>checkID(item.id,index)}>{item.name}</span>
                     })
                 }
             </div>
@@ -41,7 +44,7 @@ const Detail :React.FC =()=>{
                             return <div className={styles.item} key={index} onClick={()=>{}}>
                                 <img src={item.list_pic_url} alt=""/>
                                 <p>{item.name}</p>
-                                <p>{item.retail_price}</p>
+                                <p className={styles.price}>￥{item.retail_price}</p>
                             </div>
                         })
                     }

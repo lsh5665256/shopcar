@@ -17,24 +17,24 @@ export default class PageContent{
     name :string = ''
     @observable
     title :string = ''
+    @observable
+    curIndex?:number = 0
+    
     @action
     async goDetail(id:number){
         let params ={
             page:this.page,
             size:this.size,
             categoryId:id
-
         }
         let res = await goDetail(params)
-        this.goodsList = res.data.goodsList
-        
+        this.goodsList = res.data.goodsList  
     }
 
     @action
-    async getTopList(id:number){
+    async getTopList(id:number,index?:number){
+        this.curIndex = index
         let res = await getTopList({id})
-        console.log('res...',res)
-        // localStorage.setItem('navList',JSON.stringify(res.data.brotherCategory))
         this.navList = res.data.brotherCategory
         this.name = res.data.currentCategory.name
         this.title = res.data.currentCategory.front_name

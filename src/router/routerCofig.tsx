@@ -14,14 +14,20 @@ import Main from '../views/main'
 
 import Home from '../views/homes'
 import PageContent from '../views/PageContent/index'
+import Search from '../views/search/SearchPage'
 
 const route ={
     medo: "histroy",
     routes:[
         {
-            path:'/detail',
+            path:'/pagecontent/:id',
             component:PageContent
         },
+        {
+            path:'/search',
+            component:Search
+        },
+        
         {
             path: '/home',
             component: Home,
