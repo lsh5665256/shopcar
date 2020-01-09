@@ -4,7 +4,7 @@ interface propsType {
     route:Routes
 }
 interface Routes {
-    medo?: string,
+    medo: string,
     routes: Array<Item>
 }
 interface Item {
@@ -32,7 +32,7 @@ interface Item {
             </Switch>,
             <Switch key="2">
                 {
-                    redirects.map((item,index)=>{
+                    redirects.map((item:any,index)=>{
                         return <Redirect exact key={index} to={item.redirect} from={item.path}></Redirect>
                     })
                 }
@@ -44,7 +44,7 @@ interface Item {
         if(route instanceof Array){
             return this.healdIf()
         }else{
-        if(route.medo==="histroy"){
+        if( route.medo==="histroy"){
             return (
                 <BrowserRouter>
                     {this.healdIf()}

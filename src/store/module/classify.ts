@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-09 08:33:11
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-09 09:09:05
+ * @LastEditTime : 2020-01-09 11:32:37
  * @Description: 
  */
 import {observable,action,computed} from 'mobx'
@@ -35,8 +35,6 @@ export default class classiFyStore {
     @action 
     async classification(){
         let res = await Classification();
-        console.log(res,"ssssssssawqeqweqw")
-        console.log(res.data.data.categoryList ,"resssss")
         this.list = res.data.data.categoryList    
         this.currentList = res.data.data.currentCategory.subCategoryList 
         this.url = res.data.data.currentCategory.wap_banner_url

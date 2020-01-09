@@ -1,3 +1,10 @@
+/*
+ * @Author: 席鹏昊
+ * @Date: 2020-01-09 08:33:11
+ * @LastEditors  : 席鹏昊
+ * @LastEditTime : 2020-01-09 11:33:51
+ * @Description: 
+ */
 import {observable,action,computed} from 'mobx'
 
 import {goDetail,getTopList}  from '../../api/PageContent'
@@ -25,19 +32,18 @@ export default class PageContent{
             categoryId:id
 
         }
-        let res = await goDetail(params)
-        this.goodsList = res.data.goodsList
+        let res:any = await goDetail(params)
+        this.goodsList = res.data.data.goodsList
         
     }
 
     @action
     async getTopList(id:number){
-        let res = await getTopList({id})
-        console.log('res...',res)
+        let res:any = await getTopList({id})
         // localStorage.setItem('navList',JSON.stringify(res.data.brotherCategory))
-        this.navList = res.data.brotherCategory
-        this.name = res.data.currentCategory.name
-        this.title = res.data.currentCategory.front_name
+        this.navList = res.data.data.brotherCategory
+        this.name = res.data.data.currentCategory.name
+        this.title = res.data.data.currentCategory.front_name
 
         
     }
