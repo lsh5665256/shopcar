@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : Please set LastEditors
- * @LastEditTime : 2020-01-06 16:52:43
+ * @LastEditTime : 2020-01-09 12:00:44
  * @Description: 
  */
 
@@ -11,16 +11,15 @@ import Classify from '../views/classify'
 import Cart from '../views/cart'
 import My from '../views/my'
 import Main from '../views/main'
-
+// 图标路由
+import LiveHome from '../views/mainInview/liveHome'
 import Home from '../views/homes'
+import { Component } from 'react'
 
 const route ={
     medo: "histroy",
     routes:[
-        {
-            path: '/',
-            redirect: '/home'
-        },
+      
         {
             path: '/home',
             component: Home,
@@ -28,15 +27,15 @@ const route ={
                 {
                     path: '/home/main',                  
                     component: Main,
-            
+                   
                 },
                 {
                     path:'/home/subject',
-                    component: Classify
+                    component:Subject
                 },
                 {
                     path: '/home/classify',
-                    component: Subject,
+                    component: Classify,
             
                 },
                 {
@@ -52,9 +51,13 @@ const route ={
                 },
             ]
         },
+        {
+            path:'/livehome',
+            component:LiveHome
+        },
        
         {
-            path: '/',
+            path: '*',
             redirect: '/home/main'
         }
     ]

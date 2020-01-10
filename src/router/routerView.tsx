@@ -32,7 +32,7 @@ interface Item {
             </Switch>,
             <Switch key="2">
                 {
-                    redirects.map((item,index)=>{
+                    redirects.map((item:any,index)=>{
                         return <Redirect exact key={index} to={item.redirect} from={item.path}></Redirect>
                     })
                 }
