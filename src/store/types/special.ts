@@ -13,6 +13,7 @@ export interface specialType{
     add_time:string,
     user_info:any,
     name: string,
-    username:any
+    username:any,
+    addtalk:any
 
 }

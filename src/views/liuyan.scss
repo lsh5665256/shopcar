@@ -16,7 +16,7 @@
     }
 }
 .wenbenyu{
-  
+    position: relative;
     width: 90%;
     height:170px;
     margin: 10px auto;
@@ -34,6 +34,7 @@
 }
 .btnbox{
     width: 90%;
+    position: relative;
     display:flex;
     margin: 10px auto; 
     justify-content: space-between;
@@ -53,4 +54,12 @@
     border:none;
     border-radius: 5px;
     color: white;
+    position: absolute;
+    right: 0;
+}
+.spans{
+    position: absolute;
+    top: 90%;
+    right:5%
+
 }

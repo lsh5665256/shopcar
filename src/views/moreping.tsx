@@ -23,8 +23,8 @@ const Cart:React.FC<PropType>=(props:any)=>{
       let a1= window.location.pathname.lastIndexOf("\/")
       console.log(window.location.pathname.slice(a1+1))
       
-        Special.getmorePing({valueId:window.location.pathname.slice(a1+1),typeId:'1'})
-    }, []);
+        Special.getmorePing({valueId:window.location.pathname.slice(a1+1),typeId:'1',size:100})
+    }, [Special]);
 
 
     return useObserver(() => (

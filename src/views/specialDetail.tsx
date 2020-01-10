@@ -35,6 +35,12 @@ const Cart: React.FC<PropType> = (props) => {
     let goMore=()=>{
         props.history.push("/moreping/"+location);
     }
+    let goPinglun=()=>{
+        props.history.push("/liuyan");
+    }
+    let goTop=()=>{
+        document.documentElement.scrollTop = 0;
+    }
    
 
     return useObserver(() => (
@@ -66,7 +72,7 @@ const Cart: React.FC<PropType> = (props) => {
             {/* 精品留言 */}
             <div className="jxly">
                 <span>精选留言</span>
-                 <span><img src={tu} alt="" style={{width:"20px",height:"20px"}}/></span>
+                 <span onClick={()=>{goPinglun()}}><img src={tu} alt="" style={{width:"20px",height:"20px"}}/></span>
                
             </div>
             {/* 留言列表 */}
@@ -91,7 +97,7 @@ const Cart: React.FC<PropType> = (props) => {
             <div className="more" onClick={()=>{goMore()}}>
                 查看更多评论
            </div>
-            <div className="a1">
+            <div className="a1"  onClick={()=>{goTop()}}>
                 {
                     Special.detaillist.map((ite, index1) => {
                         return <div key={index1}>

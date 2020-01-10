@@ -10,6 +10,10 @@ export let getPinglun = (params: any)=>{
     return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,page:params.page,size:params.size})
 }
 export let getmorePing = (params: any)=>{
-    console.log(params,'___________')
-    return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId})
+   // console.log(params,'___________')
+    return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,size:100})
+}
+export let addData = (params:any)=>{
+    console.log(params,'params')
+    return  request.post('/comment/post',{content:params.content,typeId:params.typeId,valueId:params.valueId})
 }

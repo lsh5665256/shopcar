@@ -2,7 +2,7 @@
 import {specialType} from '../types/special'
 // 引入mobx
 import {observable,action,computed} from 'mobx'
-import {getSpecialData,getSpecialDetail,getPinglun,getmorePing} from '../../api/special'
+import {getSpecialData,getSpecialDetail,getPinglun,getmorePing,addData} from '../../api/special'
 
 
 // 定义数据
@@ -15,7 +15,8 @@ export default class CreateStore{
     pllist:specialType[]=[];
     @observable
     plmorelist:specialType[]=[];
-
+    @observable
+    addtalk:specialType[]=[];
 
     @action
     async getSpecialData(obj:object){
@@ -50,4 +51,14 @@ export default class CreateStore{
         this.plmorelist= res.data
         console.log( this.plmorelist,'+++++++++=')
     }
+    @action
+    async addData(obj:object){
+        const res:any =await addData(obj);
+        console.log(res,'res1111');
+        this.addtalk = res;
+        
+        // this.name=res.data[0].user_info.username
+        
+    }
+
 }

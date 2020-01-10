@@ -1,35 +1,60 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import useStore from "../utils/useState"
 import { useObserver } from "mobx-react-lite"
 import "./liuyan.css"
-import {History} from "history"
+import { History } from "history"
 interface PropType {
     location: Location,
-    history:History,
+    history: History,
+
 }
 
-const Subject:React.FC<PropType>=(props)=>{
-    let fanhui=()=>{
-        props.history.push("/spexiang");
+const Subject: React.FC<PropType> = (props) => {
+    // let [location, setLocation] = useState<number>(0)
+    let [ipt, setipt] = useState("")
+    let num = props.location.pathname.lastIndexOf('\/')
+
+
+    localStorage.setItem('x-nideshop-token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiemhhbmdzYW4iLCJwYXciOiIxMjMiLCJpYXQiOjE1NzQ3NjE2MTYsImV4cCI6MTU3NDg0ODAxNn0.mUAzdp6dZsUQM5RWZoT_BdUTzm5wGmX95OhRH4-sWjw')
+    let fanhui = () => {
+        props.history.goBack();
+    }
+    let store = useStore();
+    let { Special } = store;
+ 
+
+    let jiaodian = (e: any) => {
+        setipt(e.target.value)
+        console.log(ipt)
+        console.log(ipt.length, '长度')
     }
 
-    return (
+    let liuyan = () => {
+        Special.addData({ content: ipt, typeId: '1', valueId: props.location.pathname.slice(num + 1) })
+        props.history.goBack();
+    }
+    return useObserver(() => (
         <div className="liuyanwrap">
             <div className="liuyanheaders">
-                 <span onClick={()=>{fanhui()}}>&lt;</span>
-                 <span>查看更多评论</span>
-                 <span></span>
-             </div> 
-             <div className="wenbenyu">
-                 <textarea name="" id="" className="wby"></textarea>
-             </div>
-             <div className="btnbox">
-                <button className="c1">清空</button>
-                <button className="c2">留言</button>
-             </div>
+                <span onClick={() => { fanhui() }}>&lt;</span>
+                <span>查看更多评论</span>
+                <span></span>
+            </div>
+            <div className="wenbenyu">
+                <textarea name="" id="" value={ipt.length > 5 ? ipt.slice(0, 6) : ipt} className="wby" onChange={(e) => jiaodian(e)}></textarea>
+                <span className="spans">{ipt.length>5 ?5 :ipt.length }/80</span>
+            </div>
+
+            <div className="btnbox">
+                {
+                    ipt.length > 0 ? <button className="c1">清空</button> : ""
+                }
+
+                <button className="c2" onClick={(e) => { liuyan() }}>留言</button>
+            </div>
 
         </div>
-    )
+    ))
 }
 
 export default Subject;
