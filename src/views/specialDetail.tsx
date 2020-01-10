@@ -1,24 +1,28 @@
 
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import useStore from "../utils/useState"
 import { useObserver } from "mobx-react-lite"
 import "./specialDetail.css"
 import {History} from "history"
+import tu from "../icon/pencil.svg"
 interface PropType {
-    location: Location,
+    location: History.LocationState,
     history:History
 }
 const Cart: React.FC<PropType> = (props) => {
     //console.log(props.location)
-    
-   // let id=props.location.state
+    let [location, setLocation] = useState<number>(0)
+     
     let store = useStore();
     let { Special } = store;
     useEffect(() => {
-        const {state}=props.location as {state?:any}
-        console.log(state)
-        Special.getSpecialDetail({ id:state })
-        Special.getPinglun({valueId:state,typeId:1,page:1,size:5})
+        let id = props.location.state;
+
+        console.log('props.location...', props.location, id);
+
+        Special.getSpecialDetail({ id })
+        Special.getPinglun({valueId:id,typeId:1,page:1,size:5})
+        setLocation(id);
     }, []);
     let goback=()=>{
         props.history.goBack();
@@ -27,6 +31,15 @@ const Cart: React.FC<PropType> = (props) => {
        // props.history.push({pathname:"/spexiang/" +id})
         
         // props.history.push(`/spexiang/id=${id}`)
+    }
+    let goMore=()=>{
+        props.history.push("/moreping/"+location);
+    }
+    let goPinglun=()=>{
+        props.history.push("/liuyan");
+    }
+    let goTop=()=>{
+        document.documentElement.scrollTop = 0;
     }
    
 
@@ -51,7 +64,6 @@ const Cart: React.FC<PropType> = (props) => {
                 {
                     Special.detaillist.map((item, index) => {
                         return <span key={index}>
-                             
                             <div dangerouslySetInnerHTML={{__html:item.content}}></div>
                         </span>
                     })
@@ -59,15 +71,17 @@ const Cart: React.FC<PropType> = (props) => {
             </div>
             {/* 精品留言 */}
             <div className="jxly">
-                精选留言
+                <span>精选留言</span>
+                 <span onClick={()=>{goPinglun()}}><img src={tu} alt="" style={{width:"20px",height:"20px"}}/></span>
+               
             </div>
             {/* 留言列表 */}
             <div className ="lylist">
                  {
                      Special.pllist.map((item,index)=>{
-                         return <div className="bao"> 
+                         return <div className="bao" key={index}> 
                                 <div className="shang">
-                                    <span>匿名用户</span>
+                                    <span>{ Object.values(item.user_info).length > 0 ?item.user_info.username:"匿名用户"}</span>
                                     <span>{item.add_time}</span>
                                 </div>
                                 <div className="xia">
@@ -78,14 +92,12 @@ const Cart: React.FC<PropType> = (props) => {
                      })
                  } 
 
-
-
             </div>
             {/* 查看更多评论 */}
-            <div className="more">
+            <div className="more" onClick={()=>{goMore()}}>
                 查看更多评论
            </div>
-            <div className="a1">
+            <div className="a1"  onClick={()=>{goTop()}}>
                 {
                     Special.detaillist.map((ite, index1) => {
                         return <div key={index1}>

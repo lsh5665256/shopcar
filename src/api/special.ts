@@ -1,3 +1,10 @@
+/*
+ * @Author: 席鹏昊
+ * @Date: 2020-01-10 21:03:49
+ * @LastEditors: 席鹏昊
+ * @LastEditTime: 2020-01-10 21:07:34
+ * @Description: 
+ */
 import request from "../utils/request";
 export let getSpecialData = (params: any)=>{
     return  request.get('/topic/list',{params})
@@ -8,4 +15,12 @@ export let getSpecialDetail = (params: any)=>{
 }
 export let getPinglun = (params: any)=>{
     return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,page:params.page,size:params.size})
+}
+export let getmorePing = (params: any)=>{
+   // console.log(params,'___________')
+    return  request.get('/comment/list',{valueId:params.valueId,typeId:params.typeId,size:100})
+}
+export let addData = (params:any)=>{
+    console.log(params,'params')
+    return  request.post('/comment/post',{content:params.content,typeId:params.typeId,valueId:params.valueId})
 }

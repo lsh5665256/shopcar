@@ -1,8 +1,6 @@
 /*
- * @Author: 席鹏昊
- * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-09 11:26:20
+ * @LastEditTime : 2020-01-10 21:18:39
  * @Description: 
  */
 
@@ -16,6 +14,9 @@ import Home from '../views/homes'
 import PageContent from '../views/PageContent/index'
 import SpeXiang from "../views/specialDetail"
 import Login from "../views/login"
+import Moreping from "../views/moreping"
+import Liuyan from "../views/liuyan"
+
 const route ={
     medo: "histroy",
     routes:[
@@ -30,6 +31,14 @@ const route ={
         {
             path:"/spexiang",
             component:SpeXiang
+        },
+        {
+            path:"/moreping",
+            component:Moreping
+        },
+        {
+            path:"/liuyan",
+            component:Liuyan
         },
         {
             path: '/home',

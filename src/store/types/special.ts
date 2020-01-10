@@ -1,3 +1,10 @@
+/*
+ * @Author: 席鹏昊
+ * @Date: 2020-01-10 21:03:49
+ * @LastEditors: 席鹏昊
+ * @LastEditTime: 2020-01-10 21:10:31
+ * @Description: 
+ */
 export interface specialType{
     page:number,
     size:number,
@@ -11,7 +18,9 @@ export interface specialType{
     valueId:string,
     typeId:string,
     add_time:string,
-    user_info:string
-  
+    user_info:any,
+    name: string,
+    username:any,
+    addtalk:any
 
 }
