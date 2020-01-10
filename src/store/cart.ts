@@ -2,14 +2,14 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 15:03:13
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-08 16:35:50
+ * @LastEditTime : 2020-01-09 15:09:17
  * @Description: 
  */
 import React from "react";
 import {cartList} from "../utils/type"
 import {cartTotal} from "../utils/type"
 //ajax请求
-import {address, checked, update,deletes} from "../api/car"
+import {address, checked, update, deletes} from "../api/car"
 import {observable, action, computed} from 'mobx';
 
 export default class CarStore {

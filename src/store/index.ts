@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 15:03:29
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-09 08:52:22
+ * @LastEditTime : 2020-01-09 10:57:39
  * @Description: 
  */
 //购物车
@@ -12,9 +12,11 @@ import Details from "./details"
 // 导入store
 import classify from './module/classify'
 import PageContent from './module/PageContent'
+import Special from './modules/special'
 export default {
     cart :new Cart(),
     details :new Details(),
     classify: new classify(),
-    PageContent:new PageContent()
+    PageContent:new PageContent(),
+    Special:new Special()
 }

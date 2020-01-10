@@ -11,7 +11,7 @@ const Classify: React.FC = (props) => {
     }, [])
     let goDetail =(id:number)=>{
         // history.push({pathname:"/detail",state:id})
-        history.push({pathname:"/detail",state:id})
+        history.push({pathname:"/pagecontent",state:id})
         store.PageContent.goDetail(id)
         store.PageContent.getTopList(id)
     }

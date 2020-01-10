@@ -3,7 +3,7 @@ import React from 'react';
 const Main:React.FC=(props:any)=>{
     return (
         <div className="main">
-            main
+        main
         </div>
     )
 }

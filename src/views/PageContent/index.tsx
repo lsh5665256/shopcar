@@ -15,7 +15,6 @@ const Detail :React.FC =()=>{
         store.PageContent.getTopList(id)
     }
     let history = useHistory()
-    console.log(store.PageContent)
     return useObserver(()=>(
         <div className={styles.PageContent}>
             <div className={styles.header}>

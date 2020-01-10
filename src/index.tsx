@@ -8,7 +8,7 @@ import StoreContext from "./context/StoreContext";
 import store from "./store/index";
 
 //引入antd
-import 'antd/dist/antd.css';
+import 'antd-mobile/dist/antd-mobile.css';
 
 ReactDOM.render(<StoreContext.Provider value={store}>
                     <App />
