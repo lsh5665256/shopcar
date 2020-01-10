@@ -9,10 +9,9 @@ const Detail :React.FC =()=>{
     let store = useStore();
     useEffect(() => {
         store.PageContent.goDetail(history.location.state)
+        store.PageContent.getTopList(history.location.state,0)
     }, [])
-    useEffect(() => {
-        store.PageContent.getTopList(history.location.state)
-    }, [])
+   
     let checkID=(id:number,index:number)=>{
         store.PageContent.goDetail(id)
         store.PageContent.getTopList(id,index)

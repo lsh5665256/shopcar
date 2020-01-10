@@ -13,7 +13,7 @@ const Classify: React.FC = (props) => {
         // history.push({pathname:"/detail",state:id})
         history.push({pathname:`/pagecontent/${id}`,state:id})
         store.PageContent.goDetail(id)
-        store.PageContent.getTopList(id)
+        store.PageContent.getTopList(id,0)
     }
     return useObserver(() => (
         <div className="classify">

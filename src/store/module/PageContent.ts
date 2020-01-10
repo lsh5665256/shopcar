@@ -18,7 +18,7 @@ export default class PageContent{
     @observable
     title :string = ''
     @observable
-    curIndex?:number = 0
+    curIndex:number = 0
     
     @action
     async goDetail(id:number){
@@ -32,7 +32,7 @@ export default class PageContent{
     }
 
     @action
-    async getTopList(id:number,index?:number){
+    async getTopList(id:number,index:number){
         this.curIndex = index
         // 请求返回数据
         let res = await getTopList({id})
@@ -40,6 +40,5 @@ export default class PageContent{
         this.name = res.data.currentCategory.name
         this.title = res.data.currentCategory.front_name
 
-        
     }
 }

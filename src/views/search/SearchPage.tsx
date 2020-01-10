@@ -23,7 +23,7 @@ const Search : React.FC =  ()=>{
             <div className={styles.historyBox}>
                 {
                     search.historyKeywordList.map((item:any,index:number)=>{
-                        return <span>{item}</span>
+                        return <span key={index}>{item}</span>
                     })
                 }
             </div>
@@ -33,7 +33,9 @@ const Search : React.FC =  ()=>{
                     {
                         search.hotKeywordList.map((item:any,index:number)=>{
                             return <span className={item.is_hot == 1 ? styles.active:''} 
-                             key={index}>{item.keyword}</span>
+                            key={index}
+                            onClick={()=>search.searchInput(item.keyword)} 
+                            >{item.keyword}</span>
                         })
                     }
                 </div>
