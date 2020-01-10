@@ -1,6 +1,8 @@
 /*
+ * @Author: 席鹏昊
+ * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-10 21:18:39
+ * @LastEditTime : 2020-01-10 21:36:04
  * @Description: 
  */
 
@@ -10,12 +12,15 @@ import Cart from '../views/cart'
 import My from '../views/my'
 import Main from '../views/main'
 import Details from "../views/details"
-import Home from '../views/homes'
 import PageContent from '../views/PageContent/index'
 import SpeXiang from "../views/specialDetail"
 import Login from "../views/login"
 import Moreping from "../views/moreping"
 import Liuyan from "../views/liuyan"
+// 图标路由
+import LiveHome from '../views/mainInview/liveHome'
+import Home from '../views/homes'
+
 
 const route ={
     medo: "histroy",
@@ -47,11 +52,11 @@ const route ={
                 {
                     path: '/home/main',                  
                     component: Main,
-            
+                   
                 },
                 {
                     path:'/home/subject',
-                    component: Subject
+                    component:Subject
                 },
                 {
                     path: '/home/classify',
@@ -78,6 +83,10 @@ const route ={
         {
             path:'/pagecontent',
             component:PageContent
+        },
+        {
+            path:'/livehome',
+            component:LiveHome
         }
     ]
 }

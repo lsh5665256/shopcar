@@ -6,7 +6,6 @@
   flex-direction: column;
 } 
 .homes>.main{
-  overflow: hidden;
   width: 100%;
   flex: 1;
 }
