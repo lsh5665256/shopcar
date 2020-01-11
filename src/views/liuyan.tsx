@@ -25,10 +25,12 @@ const Subject: React.FC<PropType> = (props) => {
 
     let jiaodian = (e: any) => {
         setipt(e.target.value)
-        console.log(ipt)
+        console.log(e.target.value.length,"eeeeeeeeeeee")
+
         console.log(ipt.length, '长度')
     }
-
+    console.log(ipt,1111111)
+    console.log(ipt.length, '外面长度')
     let liuyan = () => {
         Special.addData({ content: ipt, typeId: '1', valueId: props.location.pathname.slice(num + 1) })
         props.history.goBack();
@@ -41,8 +43,8 @@ const Subject: React.FC<PropType> = (props) => {
                 <span></span>
             </div>
             <div className="wenbenyu">
-                <textarea name="" id="" value={ipt.length > 5 ? ipt.slice(0, 6) : ipt} className="wby" onChange={(e) => jiaodian(e)}></textarea>
-                <span className="spans">{ipt.length>5 ?5 :ipt.length }/80</span>
+                <textarea name="" id="" value={ipt.length > 80 ? ipt.slice(0, 80) : ipt} className="wby" onChange={(e) => jiaodian(e)}></textarea>
+                <span className="spans">{ipt.length>80 ?80 :ipt.length }/80</span>
             </div>
 
             <div className="btnbox">
