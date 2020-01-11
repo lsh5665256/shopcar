@@ -2,13 +2,13 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 19:40:24
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-08 09:14:55
+ * @LastEditTime : 2020-01-11 08:22:04
  * @Description: 
  */
 const axios = require('axios');
 const instance = axios.create({
     baseURL: 'http://169.254.12.222:8888/',
-    timeout: 1000,
+    timeout: 5000,
     // headers: {'X-Custom-Header': 'foobar'}
   });
   instance.interceptors.request.use(function (config:any) {
