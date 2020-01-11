@@ -11,14 +11,14 @@ const Classify: React.FC = (props) => {
     }, [])
     let goDetail =(id:number)=>{
         // history.push({pathname:"/detail",state:id})
-        history.push({pathname:"/pagecontent",state:id})
+        history.push({pathname:`/pagecontent/${id}`,state:id})
         store.PageContent.goDetail(id)
-        store.PageContent.getTopList(id)
+        store.PageContent.getTopList(id,0)
     }
     return useObserver(() => (
         <div className="classify">
             <div className="searchWrap">
-                <input type="text" placeholder="搜索商品,共239款好物" />
+                <div className="searchInput" onClick={()=>history.push('/search')}>搜索商品,共239款好物</div>
             </div>
             <div className="content">
                 <div className="left">

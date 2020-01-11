@@ -36,6 +36,7 @@
         }
         .active{
             border-bottom: 1px solid #00f;
+            color:#00f
         }
     }
     .main{
@@ -70,6 +71,9 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     padding: 0 15px;
+                }
+                .price{
+                    color: #f00;
                 }
             }
         }

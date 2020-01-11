@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-03 19:20:38
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-10 21:36:04
+ * @LastEditTime : 2020-01-11 08:34:13
  * @Description: 
  */
 
@@ -17,6 +17,7 @@ import SpeXiang from "../views/specialDetail"
 import Login from "../views/login"
 import Moreping from "../views/moreping"
 import Liuyan from "../views/liuyan"
+import Search from "../views/search/SearchPage"
 // 图标路由
 import LiveHome from '../views/mainInview/liveHome'
 import Home from '../views/homes'
@@ -45,6 +46,15 @@ const route ={
             path:"/liuyan",
             component:Liuyan
         },
+        {
+            path:'/pagecontent/:id',
+            component:PageContent
+        },
+        {
+            path:'/search',
+            component:Search
+        },
+        
         {
             path: '/home',
             component: Home,

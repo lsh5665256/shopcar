@@ -7,6 +7,7 @@ import Main from './modules/home'
 import GoodsList from './modules/goodsList'
 import getGoodsContData from './modules/goodsList'
 import good from './modules/goodsList'
+import search from './module/search'
 export default {
     classify: new classify(),
     PageContent:new PageContent(),
@@ -14,6 +15,7 @@ export default {
     Main:new Main(),
     GoodsList:new GoodsList(),
     getGoodsContData:new getGoodsContData(),
-    good : new good()   ,
+    good : new good() ,
+    search:new search()
 }
 

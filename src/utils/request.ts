@@ -1,3 +1,10 @@
+/*
+ * @Author: 席鹏昊
+ * @Date: 2020-01-11 08:27:47
+ * @LastEditors: 席鹏昊
+ * @LastEditTime: 2020-01-11 08:30:51
+ * @Description: 
+ */
 import axios from 'axios'
 const instance = axios.create({
   baseURL:'http://169.254.12.222:8888'

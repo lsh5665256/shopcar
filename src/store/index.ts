@@ -2,7 +2,7 @@
  * @Author: 席鹏昊
  * @Date: 2020-01-06 15:03:29
  * @LastEditors  : 席鹏昊
- * @LastEditTime : 2020-01-10 21:40:16
+ * @LastEditTime : 2020-01-11 08:36:02
  * @Description: 
  */
 //购物车
@@ -18,6 +18,7 @@ import Main from './modules/home'
 import GoodsList from './modules/goodsList'
 import getGoodsContData from './modules/goodsList'
 import good from './modules/goodsList'
+import search from './module/search'
 export default {
     cart :new Cart(),
     details :new Details(),
@@ -27,5 +28,7 @@ export default {
     Main:new Main(),
     GoodsList:new GoodsList(),
     getGoodsContData:new getGoodsContData(),
-    good : new good()   ,
+    good : new good(),
+    search:new search()
 }
+

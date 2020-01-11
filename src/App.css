@@ -28,15 +28,13 @@ a{
   align-items: center;
   justify-content: center;
 }
-.searchWrap input{
+.searchWrap .searchInput{
   width: 90%;
   height: 70%;
   background: #ededed;
   border-radius: 5px;
   font-size: 16px;
   color: #666;
-  border: none;
-  outline: none;
   text-align: center;
   
 }
@@ -109,7 +107,7 @@ a{
 }
 .classify .content .right .image-text .item{
   width: 50%;
-  height: 160px;
+  height: 170px;
 }
 .classify .content .right .image-text .item p{
   width: 100%;
