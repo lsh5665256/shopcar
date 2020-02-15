@@ -1,0 +1,30 @@
+/* pages/time/time.wxss */
+.box{
+  width: 100%;
+  height: 100%;
+}
+.time,.result,.to{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+.time{
+  font-size: 34rpx;
+}
+.btn{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classTime{
+  padding: 30rpx;
+  border: 1rpx solid #ccc;
+}
+.clear{
+  padding: 30rpx;
+  border: 1rpx solid #ccc;
+  margin-left: 30rpx;
+}

@@ -1,0 +1,16 @@
+<view>
+  <text>时间差计算器</text>
+  <view class="start">
+    <text class="startDate">开始日期:</text>
+    <picker mode="date" fields="day" end="{{endDate}}" bindchange="startDate">
+      <view>{{start}}</view>
+    </picker>
+  </view>
+  <view class="end">
+    <text class="endDate">结束日期:</text>
+    <picker mode="date" fields="day" end="{{endDate}}"  bindchange="endDate">
+      <text>{{end}}</text>
+    </picker>
+  </view>
+   <text>{{sky}}</text>
+</view>

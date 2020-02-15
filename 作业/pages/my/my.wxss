@@ -1,0 +1,16 @@
+/* pages/my/my.wxss */
+.start,.end{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}
+.startDate,.endDate{
+  width: 200rpx;
+  text-align: center
+}
+.end{
+ border-top: none;
+}

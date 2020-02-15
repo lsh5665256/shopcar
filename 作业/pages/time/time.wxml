@@ -1,0 +1,18 @@
+<view class="box">
+  <view class="time">中国人现阶段人均寿命900月</view>
+  <view class="result"><text>{{year}}年{{month}}月至今{{distance}}多少个月</text></view>
+  <view class="btn">
+  <view>
+    <picker mode="date" 
+    value="{{date}}" 
+    start="1000-00-01" 
+    end="2020-12-31"   
+    fields="month"                       
+    bindchange="bindDateChange">
+    <view class="classTime">换个日期</view>
+  </picker>
+  </view>
+    <view class="clear">清除记录</view>
+  </view>
+  <view class="to" bindtap="toMy">去日期计算</view>
+</view>
