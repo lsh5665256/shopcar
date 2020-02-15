@@ -15,7 +15,7 @@ import {getSpecialData,getSpecialDetail,getPinglun,getmorePing,addData} from '..
 // 定义数据
 export default class CreateStore{
     @observable
-    list:specialType[]=[];
+    list:specialType[]=[];//表示数组里定义的每一项都是specialType里定义的东西
     @observable
     detaillist:specialType[]=[];
     @observable
@@ -28,9 +28,10 @@ export default class CreateStore{
     @action
     async getSpecialData(obj:object){
         const res:any =await getSpecialData(obj);
-       // console.log(res,'res');
+        console.log(res,'res111111111111111111111111111111111111');
         
         this.list = res.data;
+        console.log(this.list,"2222222222222222222222222222222222222222222222222")
     }
     @action
     async getSpecialDetail(obj:object){

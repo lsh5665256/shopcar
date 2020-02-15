@@ -44,7 +44,8 @@ const Subject: React.FC<PropType> = (props) => {
             </div>
             <div className="wenbenyu">
                 <textarea name="" id="" value={ipt.length > 80 ? ipt.slice(0, 80) : ipt} className="wby" onChange={(e) => jiaodian(e)}></textarea>
-                <span className="spans">{ipt.length>80 ?80 :ipt.length }/80</span>
+                
+                <span className={`spans ${ipt.length>80?'active':''}`}>{ipt.length>80 ?80 :ipt.length }/80</span>
             </div>
 
             <div className="btnbox">

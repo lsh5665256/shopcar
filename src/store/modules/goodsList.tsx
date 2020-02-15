@@ -13,19 +13,19 @@ import {getGoodsContData} from '../../api/goodsList'
 //定义数据
 export default class CreateStore{
     @observable
-    goodsData:GoodsList[]=[]
+    goodsData:GoodsList[]=[] //定义数组的一般都是请求回来的data，然后GoodsList[]=[]这么写是数组里的每一项是都需要在GoodsList里定义过
    
     @observable
     goodsContList:GoodsContList[]=[]
 
     @observable
-    twocontName:string=''
+    twocontName:string='' //要字符串的单独在这里定义就好了
     @observable
     twofrontdesc:string=''
 
 
     @observable
-    curIndex:number= 0
+    curIndex:number= 0  //函数传参形参实参都需要定义
 
     @observable
     cateGoodsData:CateGoodsList[]=[]

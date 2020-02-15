@@ -7,7 +7,7 @@
  */
 import axios from 'axios'
 const instance = axios.create({
-  baseURL:'http://169.254.12.222:8888'
+  baseURL:'http://192.168.0.107:8888'
 })
 
 const getNewHeaders = () =>{
