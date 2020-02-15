@@ -1,0 +1,10 @@
+<view class="list">
+  <view class='list-half'>
+    <view wx:for="{{listData}}" wx:key="index" wx:if="{{index%2 == 0}}" class='card'>
+    </view>
+  </view>
+  <view class='list-half'>
+    <view wx:for="{{listData}}" wx:key="index" wx:if="{{index%2 != 0}}" class='card'>
+    </view>
+  </view>
+</view>

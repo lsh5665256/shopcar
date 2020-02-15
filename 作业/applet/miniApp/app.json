@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/data/data",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "gray",
+    "selectedColor": "skyblue",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath":"pages/index/index",
+        "text": "日期计算"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "人生进度"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "瀑布流"
+      }
+    ]
+  }
+}
