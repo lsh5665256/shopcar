@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="wrap">
+        <map longitude="{{longitude}}" latitude="{{latitude}}" show-location="{{true}}"></map>
+        <button>添加面试</button>
+    </view>
+</block>
