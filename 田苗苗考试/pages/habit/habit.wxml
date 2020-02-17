@@ -1,0 +1,16 @@
+<view class='habitBox'>
+  <view class='habitBoxCont'>
+    <view class='habitcontBox'>
+     <view class="habittitle">我的习惯</view>
+     <view class='everyList'>
+      1.每天早晨一杯温水
+     </view>
+     <!-- <view class='everyList' wx:for="{{list}}">
+      {{index+1}}.{{item.everyData}}
+     </view> -->
+     <view class='add'bindtap="addclick">
+     +
+     </view>
+    </view>
+  </view>
+</view>

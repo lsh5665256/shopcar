@@ -1,0 +1,13 @@
+<view class='listBox'>
+  <view class='listBoxCont'>
+    <view class='contBox'>
+     <view class="title"> 多彩周末体验计划</view>
+     <view class='everyList' bindtap='showtip' wx:for="{{list}}">
+      {{index+1}}.{{item.everyData}}
+     </view>
+       <view class='add'bindtap="addclick">
+     +
+     </view>
+    </view>
+  </view>
+</view>
