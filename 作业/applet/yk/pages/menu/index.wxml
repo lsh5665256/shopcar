@@ -1,0 +1,15 @@
+<!--pages/menu/index.wxml-->
+<view class='container'>
+    <view class='header'>
+        <view wx:for="{{headerData}}"
+           wx:key="index"
+           data-index="{{index}}"
+           bindtap='changeIndex'
+           >
+           <text  class="{{currentTab == index ? 'active':''}}">{{item.text}}</text>
+        </view>
+    </view>
+    <view class='content'>
+        <view></view>
+    </view>
+</view>

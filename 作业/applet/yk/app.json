@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/menu/index",
+    "pages/plaza/index",
+    "pages/inform/index",
+    "pages/my/index"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/menu/index",
+      "text": "菜单"
+    },{
+      "pagePath": "pages/plaza/index",
+      "text": "广场"
+    },{
+      "pagePath": "pages/inform/index",
+      "text": "通知"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "我"
+    }]
+  }
+  
+
+}
