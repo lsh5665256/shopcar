@@ -1,0 +1,157 @@
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+.homes>.main{
+  width: 100%;
+  flex: 1;
+}
+.homes>.footer{
+  width: 100%;
+  height: 50px ;
+  background: #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+
+.searchWrap{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchWrap .searchInput{
+  width: 90%;
+  height: 70%;
+  background: #ededed;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  
+}
+.classify{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.classify .content{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.classify .content .left{
+  width: 30%;
+  height: 100%;
+  overflow: scroll;
+  border-right: 1px solid #f4f4f4;
+}
+.classify .content .left p{
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.main{
+  flex: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.classify .content .right{
+  width: 70%;
+  overflow: scroll;
+}
+
+.classify .content .right .topBox{
+  width: 100%;
+  height: 120px;
+  position: relative;
+  display: flex;
+  flex-shrink: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+.classify .content .right .topBox span{
+  position: absolute;
+  color: #fff;
+  font-size: 15px;
+}
+.classify .content .right .topBox p{
+  width: 100%;
+  height: 100%;
+  background-size: cover ;
+  background-position: center ;
+}
+.classify .content .right .title{
+  width: 100%;
+  height: 30px;
+  padding: 5px 3px;
+  text-align: center;
+}
+.classify .content .right .image-text{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.classify .content .right .image-text .item{
+  width: 50%;
+  height: 170px;
+}
+.classify .content .right .image-text .item p{
+  width: 100%;
+  text-align: center;
+}
+.classify .content .right .image-text .item img{
+  width: 100%;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html,body,#root,.homes{
+width: 100%;
+height: 100%;
+}
+.homes{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.main{
+  width: 100%;
+  flex: 1;
+}
+.footer{
+  width: 100%;
+  height: 50px;
+  background: #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.active1{
+  border-left: 2px solid #108ee9;
+}

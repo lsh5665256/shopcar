@@ -1,0 +1,78 @@
+.liuyanheaders {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2px solid #ccc;
+}
+
+.liuyanheaders span:nth-child(1) {
+  flex: 1;
+  color: #666;
+}
+
+.liuyanheaders span:nth-child(2) {
+  flex: 8;
+  text-align: center;
+}
+
+.liuyanheaders span:nth-child(3) {
+  flex: 1;
+}
+
+.wenbenyu {
+  position: relative;
+  width: 90%;
+  height: 170px;
+  margin: 10px auto;
+}
+
+.wby {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.liuyanwrap {
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.btnbox {
+  width: 90%;
+  position: relative;
+  display: flex;
+  margin: 10px auto;
+  justify-content: space-between;
+}
+
+.btnbox button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+.c1 {
+  background: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.c2 {
+  background: #108ee9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  right: 0;
+}
+
+.spans {
+  position: absolute;
+  top: 90%;
+  right: 5%;
+}
+
+.active {
+  color: red;
+}
