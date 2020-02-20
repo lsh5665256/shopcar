@@ -48,7 +48,6 @@ class App extends Component {
         if (res.code) {
           //发起网络请求
           let response = await login(res.code);
-          console.log('res...', response);
           // 把openid存储到小程序的本地存储
           wx.setStorageSync('openid', response.data.openid);
         } else {
