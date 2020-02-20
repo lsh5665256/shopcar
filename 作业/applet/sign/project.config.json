@@ -2,13 +2,12 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "sign",
 	"description": "一款精致的面试管理软件",
-	"appid": "wxb45ee9cdbbe82f2b",
+	"appid": "wx3375420e2c184d34  ",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
 		"postcss": false,
-		"minified": false,
-		"newFeature": true
+		"minified": false
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
@@ -40,6 +39,13 @@
 					"id": -1,
 					"name": "地图页面",
 					"pathName": "pages/map/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加面试页面",
+					"pathName": "pages/sign/add/index",
 					"scene": null
 				}
 			]

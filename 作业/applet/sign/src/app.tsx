@@ -27,14 +27,11 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      // 'pages/index/index',
-      'pages/map/index'
+      'pages/index/index',
+      'pages/map/index',
+      'pages/sign/add/index',
+      'pages/sign/location/index'
     ],
-    "permission":{
-        "scope.userLocation":{
-          "desc":"你的位置信息将用于小程序位置接口的效果展示"
-        }
-    },
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -50,13 +47,7 @@ class App extends Component {
       async success (res) {
         if (res.code) {
           //发起网络请求
-          // console.log('code...', res.code)
-          // store.dispatch({
-          //   type: 'LOGIN',
-          //   payload: res.code
-          // });
           let response = await login(res.code);
-          console.log('res...', response);
           // 把openid存储到小程序的本地存储
           wx.setStorageSync('openid', response.data.openid);
         } else {

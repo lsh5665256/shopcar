@@ -28,12 +28,18 @@ class MapCom extends Component {
 
   componentDidHide () { }
 
+  addSign(){
+    wx.navigateTo({
+      url: '/pages/sign/add/index'
+    })
+  }
+
   render () {
     let {longitude, latitude} = this.state.location;
     return (
       <View className='wrap'>
         <Map longitude={longitude} latitude={latitude} show-location/>
-        <Button>添加面试</Button>
+        <Button onClick={()=>this.addSign()}>添加面试</Button>
       </View>
     )
   }
