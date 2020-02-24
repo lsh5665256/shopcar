@@ -4,7 +4,7 @@ import { View, Text, Input, Button, Form, Icon  } from '@tarojs/components'
 import './index.scss'
 import { connect } from '@tarojs/redux'
 import {getSignListAction} from '../../../actions/sign'
-
+import { ITouchEvent } from '@tarojs/components/types/common'
 
 
 type PageStateProps = {
@@ -49,7 +49,6 @@ class SignList extends Component<{}, PageState> {
     status: 2,
     page: 1,
     pageSize: 10,
-    curIndex:0,
     list:[{
       text:"未开始",
       id:1
@@ -75,31 +74,32 @@ class SignList extends Component<{}, PageState> {
 
   componentDidHide () { }
 
-  setCurIndex = (index) => {
-    console.log('index',index)
+  changeIndex = (e:ITouchEvent) => {
+    console.log('index',e)
     this.setState({
-      // curIndex : index
+      status: e.target.dataset.status
     })
-    // this.setState({
-    //   curIndex :index
-    // })
+
   }
   render () {
+    console.log('123123123',this.props.list)
     return (
       <View className='wrap'>
           <View className="header">
             {
               this.state.list.map((item,index)=>{
                    return  <View key={index}>
-                          <Text  
-                            onClick={()=>this.state.curIndex = index}
-                            className={this.state.curIndex == index ?'active':""}>{item.text}
-                     </Text></View>
-              })
+                              <Text  
+                                data-status={index-1}
+                                onClick={this.changeIndex}
+                                className={index-1 == this.state.status ?'active':''}>{item.text}
+                              </Text>
+                            </View>
+                })
             }
           </View>
           <View className="content">
-            {
+            {/* {
               this.props.list.map((item, index) => {
                   return <View className="item" key={index} >
                         <View className="title">
@@ -113,8 +113,16 @@ class SignList extends Component<{}, PageState> {
                         </View>
                   </View>
               })
+            } */}
+            {
+              // this.props.list.map((item)=>{
+              //   return <View  data-id={item.id}>
+              //     <Text>{item.company}</Text>
+              //     <Text>{JSON.parse(item.address).address}</Text>
+              //     <Text>{new Date(item.start_time).toString()}</Text>
+              //   </View>
+              // })
             }
-                
           </View>
       </View>
     )
