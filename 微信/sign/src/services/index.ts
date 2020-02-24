@@ -14,4 +14,3 @@ export function addSign(params){
 export function getSignList(params){
   return flyio.get('/sign', params);
 }
-
